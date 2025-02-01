@@ -7,11 +7,16 @@
 //include "/etc/bind/zones.rfc1918";
 
 // Zona directa
-zone "" {
-    // Rellenar
+zone "olimpo.test" {
+    type master;
+    file "/etc/bind/db.olimpo.test";
+    allow-transfer { 192.168.57.11; };
+    notify yes;
 };
 
 // Zona inversa
-zone "" {
-     // Rellenar
+zone "57.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192.168.57";
+    allow-transfer { 192.168.57.11; };
 };
