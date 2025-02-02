@@ -48,8 +48,8 @@ Vagrant.configure("2") do |config|
       # Copiar resto ficheros
       cp /vagrant/atlas/named.conf.local /etc/bind/
       cp /vagrant/atlas/named.conf.options /etc/bind/
-      cp /vagrant/atlas/db.olimpo.test /etc/bind/
-      cp /vagrant/atlas/db.192.168.57 /etc/bind/
+      cp /vagrant/atlas/olimpo.test.dns /etc/bind/
+      cp /vagrant/atlas/192.168.57.dns /etc/bind/
       systemctl restart bind9
       systemctl status bind9
     SHELL

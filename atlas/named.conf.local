@@ -9,7 +9,7 @@
 // Zona directa
 zone "olimpo.test" {
     type master;
-    file "/etc/bind/db.olimpo.test";
+    file "/etc/bind/olimpo.test.dns";
     allow-transfer { 192.168.57.11; };
     notify yes;
 };
@@ -17,6 +17,6 @@ zone "olimpo.test" {
 // Zona inversa
 zone "57.168.192.in-addr.arpa" {
     type master;
-    file "/etc/bind/db.192.168.57";
+    file "/etc/bind/192.168.57.dns";
     allow-transfer { 192.168.57.11; };
 };
