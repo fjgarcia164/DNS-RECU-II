@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     # Copiar ficheros configuración 
     
     atlas.vm.provision "config", type:"shell", inline: <<-SHELL
-      cp -v /vagrant/resolv.conf /etc/
+      cp -v /vagrant/atlas/resolv.conf /etc/
       # Copiar resto ficheros
       cp /vagrant/atlas/named.conf.local /etc/bind/
       cp /vagrant/atlas/named.conf.options /etc/bind/
@@ -77,7 +77,7 @@ Vagrant.configure("2") do |config|
     # Copiar ficheros configuración 
     
     ceo.vm.provision "config", type:"shell", inline: <<-SHELL
-      cp -v /vagrant/resolv.conf /etc/
+      cp -v /vagrant/ceo/resolv.conf /etc/
       # Copiar resto ficheros
       cp /vagrant/ceo/named.conf.local /etc/bind/
       cp /vagrant/ceo/named.conf.options /etc/bind/
